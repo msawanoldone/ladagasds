@@ -271,6 +271,9 @@ if (message.content.startsWith(prefix + 'help')) { /// This is The DMS Code Send
 1stop - لإخرآج البوت من الروم
 1np - لمعرفة الأغنية المشغلة حآليا
 1queue - لمعرفة قآئمة التشغيل
+1ping - لمعرفة لبنق البوت
+1uptime - لمعرفة من متى شغال البوت
+
 **
   
    
@@ -404,7 +407,7 @@ message.channel.send({embed:embed});
 
 
  client.on('message', function(message) {
-	const myID = "490076609215201282";
+	const myID = "526210504822358056";
     let args = message.content.split(" ").slice(1).join(" ");
     if(message.content.startsWith(adminprefix + "setname")) {
 		        if(message.author.id !== myID) return;
@@ -459,7 +462,7 @@ message.channel.send({embed:embed});
 
   client.on('message',async message => {
     if(message.content.startsWith(adminprefix + "restart")) {
-        if(message.author.id !== "490076609215201282") return message.reply('You aren\'t the bot owner.');
+        if(message.author.id !== "526210504822358056") return message.reply('You aren\'t the bot owner.');
         message.channel.send('**Restarting.**').then(msg => {
             setTimeout(() => {
                msg.edit('**Restarting..**');
